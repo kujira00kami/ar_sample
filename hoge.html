@@ -20,19 +20,13 @@
         <a-asset-item id="mtl" src="hoge.mtl"></a-asset-item>   <!-- mtlファイル -->
       </a-assets>
 
-      <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
-      <a-marker preset="hiro">
-        <!-- マーカーの場所に箱を置く（見やすいようにワイヤーフレーム表示） -->
-        <a-box position="0 0.5 0" wireframe="true"></a-box>
-      </a-marker>
-
       <!-- マーカーを登録（プリセットされている「kanji」マーカー） -->
       <a-marker preset="kanji">
         <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
         <a-obj-model
           src="#obj"
           mtl="#mtl"
-          scale="0.005 0.005 0.005"
+          scale="0.5 0.5 0.5"
           position="0 0.5 0">
           <a-animation
             attribute="rotation"
