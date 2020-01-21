@@ -20,11 +20,8 @@
         <video id="penguin-sledding" autoplay muted loop="true" src="hoge.mp4" webkit-playsinline playsinline> </video>
       </a-assets>
 
-      <!-- マーカーを登録 -->
-      <a-marker type='pattern' url='kujira.patt'>
       <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
-      <a-videosphere src="#penguin-sledding" width="16" height="9" position="0 0 -20"> </a-videosphere>
-      </a-marker>
+      <a-videosphere src="#penguin-sledding"> </a-videosphere>
 
       <!-- AR用のカメラを置く -->
       <a-entity camera>
