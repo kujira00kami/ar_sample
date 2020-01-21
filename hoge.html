@@ -15,15 +15,8 @@
     <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
     <a-scene>
 
-      <!-- OBJ形式のCGモデルの読み込み -->
-      <a-assets>
-        <video playsinline muted autoplay width="1280" height="720">
-    　　　　<source id="hogemovie" type="video/mp4" src="hoge.mp4">
-        </video>
-      </a-assets>
-
       <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
-      <a-videosphere src="#hogemovie"> </a-videosphere>
+      <a-videosphere src="hoge.mp4"> </a-videosphere>
 
     </a-scene>
   </body>
