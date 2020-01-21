@@ -13,11 +13,12 @@
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
 
     <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
-    <a-scene>
+<a-scene>
+  <a-assets>
+    <video id="penguin-sledding" autoplay loop="true" src="hoge.mp4"></video>
+  </a-assets>
 
-      <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
-      <a-videosphere src="hoge.mp4"> </a-videosphere>
-
-    </a-scene>
+  <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20"></a-video>
+</a-scene>
   </body>
 </html>
