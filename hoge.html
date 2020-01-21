@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>CG モデルを登場させる</title>
   </head>
   <body style="margin:0px; overflow:hidden;">
@@ -22,7 +23,7 @@
       <!-- マーカーを登録 -->
       <a-marker type='pattern' url='kujira.patt'>
       <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
-      <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20"> </a-video>
+      <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20" webkit-playsinline playsinline> </a-video>
       </a-marker>
 
       <!-- AR用のカメラを置く -->
