@@ -13,7 +13,7 @@
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
 
     <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
-<a-scene>
+    <a-scene embedded arjs="debugUIEnabled:false;">
   <a-assets>
         <a-asset-item id="obj" src="hoge.obj"></a-asset-item>   <!-- objファイル -->
         <a-asset-item id="mtl" src="hoge.mtl"></a-asset-item>   <!-- mtlファイル -->
@@ -24,6 +24,9 @@
       <a-marker type='pattern' url='kujira.patt'>
   <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20"></a-video>
       </a-marker>
+  
+      <!-- AR用のカメラを置く -->
+      <a-entity camera></a-entity>
 </a-scene>
   </body>
 </html>
