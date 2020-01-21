@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>CG モデルを登場させる</title>
+    <title>arサンプル</title>
   </head>
   <body style="margin:0px; overflow:hidden;">
     <!-- A-Frame ライブラリの読み込み -->
@@ -15,10 +15,15 @@
     <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
 <a-scene>
   <a-assets>
+        <a-asset-item id="obj" src="hoge.obj"></a-asset-item>   <!-- objファイル -->
+        <a-asset-item id="mtl" src="hoge.mtl"></a-asset-item>   <!-- mtlファイル -->
     <video id="penguin-sledding" autoplay loop="true" src="hoge.mp4"></video>
   </a-assets>
 
+        <!-- マーカーを登録（プリセットされている「kanji」マーカー） -->
+      <a-marker type='pattern' url='kujira.patt'>
   <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20"></a-video>
+      </a-marker>
 </a-scene>
   </body>
 </html>
