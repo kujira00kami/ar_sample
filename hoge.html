@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>arサンプル</title>
   </head>
-  <body style="margin:0px; overflow:hidden;">
+  <body style="margin:0px; overflow:hidden;" onLoad="playVideo()">
     <!-- A-Frame ライブラリの読み込み -->
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <!-- AR.js ライブラリの読み込み -->
@@ -29,5 +29,15 @@
       <!-- AR用のカメラを置く -->
       <a-entity camera></a-entity>
 </a-scene>
+    
+    
+    <script type="text/javascript">
+var v = document.getElementById("penguin-sledding");
+      function playVideo() {
+	//動画を再生
+	v.play();
+	
+  }
+      </script>
   </body>
 </html>
