@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>arサンプル</title>
   </head>
-  <body style="margin:0px; overflow:hidden;" onLoad="playVideo()">
+  <body style="margin:0px; overflow:hidden;">
     <!-- A-Frame ライブラリの読み込み -->
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <!-- AR.js ライブラリの読み込み -->
@@ -17,13 +17,13 @@
   <a-assets>
         <a-asset-item id="obj" src="hoge.obj"></a-asset-item>   <!-- objファイル -->
         <a-asset-item id="mtl" src="hoge.mtl"></a-asset-item>   <!-- mtlファイル -->
-    <video id="penguin-sledding" playsinline muted autoplay loop src="hoge.mp4" onclick=”this.play();”></video>
+    <video id="penguin-sledding" playsinline muted autoplay loop src="hoge.mp4" onclick=”playVideo();”></video>
   </a-assets>
 
         <!-- マーカーを登録（プリセットされている「kanji」マーカー） -->
       <a-marker type='pattern' url='kujira.patt'>
-        <!-- <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20"></a-video> -->
-        <a-video position='0 0.1 0' rotation='270 0 0' scale='1 1 1' src='#penguin-sledding' width="16" height="9"></a-video>
+        <!-- <a-video position='0 0.1 0' rotation='270 0 0' scale='1 1 1' src='#penguin-sledding' width="16" height="9"></a-video> -->
+	      <a-video position='0 0.1 0' rotation='270 0 0' scale='1 1 1' src='#penguin-sledding' width="16" height="9"></a-video>
       </a-marker>
   
       <!-- AR用のカメラを置く -->
