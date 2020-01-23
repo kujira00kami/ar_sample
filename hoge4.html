@@ -12,9 +12,10 @@
 
 <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
 <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="style/style.css">
     <title>arサンプル</title>
   </head>
-  <body style="margin:0px; overflow:hidden;" onload="playVideo();">
+  <body>
 <div id="test">
     <h3>test</h3>
 </div>
@@ -24,7 +25,6 @@
   <a-assets>
         <a-asset-item id="obj" src="hoge.obj"></a-asset-item>   <!-- objファイル -->
         <a-asset-item id="mtl" src="hoge.mtl"></a-asset-item>   <!-- mtlファイル -->
-    <video id="penguin-sledding" playsinline muted autoplay loop src="hoge.mp4"></video>
   </a-assets>
 
         <!-- マーカーを登録（プリセットされている「kanji」マーカー） -->
