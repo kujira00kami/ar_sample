@@ -26,12 +26,11 @@
 	      <a-video position='0 0.1 0' rotation='270 0 0' src='#penguin-sledding' scale='1.0 1.0 1.0'></a-video>
       </a-marker>
   
-      <!-- AR用のカメラを置く -->
-      <a-camera
-  far="100">
-</a-camera>
-      <!-- <a-entity camera></a-entity> -->
-	    <a-entity camera zoom='1'></a-entity>
+      <a-entity position="0 0 5">
+  <a-camera></a-camera>
+  <a-animation attribute="position" to="0 0 0" direction="alternate" dur="2000" repeat="indefinite">
+  </a-animation>
+</a-entity>
 </a-scene>
     
     
