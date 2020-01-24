@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>arサンプル</title>
+  </head>
+  <body style="margin:0px; overflow:hidden;" onload="playVideo();">
+    <!-- A-Frame ライブラリの読み込み -->
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <!-- AR.js ライブラリの読み込み -->
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+
+    <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
+    <a-scene embedded arjs="debugUIEnabled:false;">
+  <a-assets>
+    <video id="penguin-sledding" playsinline muted autoplay loop src="kujira.mp4"></video>
+  </a-assets>
+
+        <!-- マーカーを登録（プリセットされている「kanji」マーカー） -->
+      <a-marker type='pattern' url='kujira.patt'>
+	      <a-video rotation='270 0 0' src='#penguin-sledding' scale='1.0 1.0 1.0'></a-video>
+      </a-marker>
+ 
+  <a-entity camera></a-entity>
+</a-scene>
+    
+    
+    <script type="text/javascript">
+var v = document.getElementById("penguin-sledding");
+      function playVideo() {
+	//動画を再生
+	v.play();
+	
+  }
+      </script>
+  </body>
+</html>
