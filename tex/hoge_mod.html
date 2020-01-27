@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CG モデルを登場させる</title>
+  </head>
+  <body style="margin:0px; overflow:hidden;">
+    <!-- A-Frame ライブラリの読み込み -->
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <!-- AR.js ライブラリの読み込み -->
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+
+    <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
+    <a-scene embedded arjs="debugUIEnabled:false;">
+
+      <!-- OBJ形式のCGモデルの読み込み -->
+      <a-assets>
+        <a-asset-item id="obj" src="hoge2.obj"></a-asset-item>   <!-- objファイル -->
+        <a-asset-item id="mtl" src="hoge2.mtl"></a-asset-item>   <!-- mtlファイル -->
+      </a-assets>
+
+      <!-- マーカーを登録（プリセットされている「kanji」マーカー） -->
+      <a-marker type='pattern' url='kujira.patt'>
+        <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
+        <a-obj-model
+          src="#obj"
+          mtl="#mtl
+          position="0 0.5 0"
+          scale="0.5 0.5 0.5">
+          <a-animation
+            attribute="rotation"
+            to="360 360 0"
+            dur="5000"
+            easing="linear"
+            repeat="indefinite">
+          </a-animation>
+        </a-obj-model>
+      </a-marker>
+
+      <!-- AR用のカメラを置く -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
