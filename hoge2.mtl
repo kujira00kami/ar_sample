@@ -10,7 +10,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd keren\\Desktop\\Mech_zak\\Texturizer\\uv_mg_yellow.R.png
+map_Kd ./tex/uv_mg_yellow.R.png
 
 newmtl col_black
 Ns 96.078443
@@ -61,8 +61,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Bump -bm 0.800000 keren\\Desktop\\Mech_zak\\Texturizer\\metal_1.jpg
-map_Kd keren\\Desktop\\Mech_zak\\Texturizer\\metal_1.jpg
+map_Bump -bm 0.800000 ./tex/metal_1.jpg
+map_Kd ./tex/metal_1.jpg
 
 newmtl col_reflection
 Ns 96.078443
@@ -73,7 +73,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd keren\\Desktop\\Mech_zak\\Texturizer\\Blury.jpg
+map_Kd ./tex/Blury.jpg
 
 newmtl col_silver
 Ns 96.078443
@@ -94,7 +94,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd keren\\Desktop\\Mech_zak\\Texturizer\\logo_zak.png
+map_Kd ./tex/logo_zak.png
 
 newmtl uv_ancle_yellow.R
 Ns 96.078443
@@ -105,7 +105,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd keren\\Desktop\\Mech_zak\\Texturizer\\uv_yellow_ancle_L.png
+map_Kd ./tex/uv_yellow_ancle_L.png
 
 newmtl uv_cookpit.L
 Ns 96.078443
@@ -116,7 +116,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 1
-map_Kd keren\\Desktop\\Mech_zak\\Texturizer\\uv_cookpit_left_2.png
+map_Kd ./tex/uv_cookpit_left_2.png
 
 newmtl uv_foot_yellow.L
 Ns 96.078443
@@ -127,7 +127,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd keren\\Desktop\\Mech_zak\\Texturizer\\uv_foot_yelow.L.png
+map_Kd ./tex/uv_foot_yelow.L.png
 
 newmtl uv_mech
 Ns 96.078443
@@ -138,7 +138,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd keren\\Desktop\\Mech_zak\\Texturizer\\uv_mech.png
+map_Kd ./tex/uv_mech.png
 
 newmtl uv_mg_yellow.L
 Ns 96.078443
@@ -149,7 +149,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd keren\\Desktop\\Mech_zak\\Texturizer\\uv_mg_line_yellow.L.png
+map_Kd ./tex/uv_mg_line_yellow.L.png
 
 newmtl uv_mg_yellow.R
 Ns 96.078443
@@ -160,7 +160,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd keren\\Desktop\\Mech_zak\\Texturizer\\uv_missles_L.png
+map_Kd ./tex/uv_missles_L.png
 
 newmtl uv_mg_yellow2
 Ns 96.078443
@@ -171,7 +171,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd keren\\Desktop\\Mech_zak\\Texturizer\\uv_mg_yellow2.png
+map_Kd ./tex/uv_mg_yellow2.png
 
 newmtl uv_missles.R
 Ns 96.078443
@@ -182,7 +182,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd keren\\Desktop\\Mech_zak\\Texturizer\\uv_missles_R.png
+map_Kd ./tex/uv_missles_R.png
 
 newmtl uv_yellow_3
 Ns 96.078443
@@ -193,7 +193,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd keren\\Desktop\\Mech_zak\\Texturizer\\uv_yellow3.png
+map_Kd ./tex/uv_yellow3.png
 
 newmtl uv_yellow_4
 Ns 96.078443
@@ -204,4 +204,4 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd keren\\Desktop\\Mech_zak\\Texturizer\\uv_yellow4.png
+map_Kd ./tex/uv_yellow4.png
