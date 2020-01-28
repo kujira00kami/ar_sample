@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- A-Frame ライブラリの読み込み -->
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <!-- AR.js ライブラリの読み込み -->
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+    <title>arサンプル</title>
+  </head>
+  <body style="margin:0px; overflow:hidden;" onload="playVideo();">
+    <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
+    <a-scene embedded arjs="debugUIEnabled:false;">
+  <a-assets>
+    <img id="img" src="hoge.gif">
+  </a-assets>   
+
+        <!-- マーカーを登録（プリセットされている「kanji」マーカー） -->
+      <a-marker type='pattern' url='kujira.patt'>
+        <a-image src="#img"></a-image>
+      </a-marker>
+  
+      <!-- AR用のカメラを置く -->
+      <a-entity camera></a-entity>
+</a-scene>
+  </body>
+</html>
