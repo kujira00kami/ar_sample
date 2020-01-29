@@ -8,6 +8,7 @@
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <title>arサンプル</title>
 
@@ -26,10 +27,30 @@
     </a-scene>
 
     <script>  
-      console.log("hoge st");
-      var hoge = document.getElementById("kujie").getAttribute("position");
-      console.log("pos : "+hoge.x);
-      console.log("hoge ed");
+    $(function() {
+        $('#kujie').on('touchstart', onTouchStart); //指が触れたか検知
+        $('#kujie').on('touchmove', onTouchMove); //指が動いたか検知
+        var direction, position;
+
+        //スワイプ開始時の横方向の座標を格納
+        function onTouchStart(event) {
+            position = getPosition(event);
+            direction = ''; //一度リセットする
+        }
+
+        //スワイプの方向（left／right）を取得
+        function onTouchMove(event) {
+            var mov = position - getPosition(event);
+            if (position - getPosition(event) > 70) { // 70px以上移動しなければスワイプと判断しない
+            alert("動いた");
+            }
+        }
+
+        //横方向の座標を取得
+        function getPosition(event) {
+            return event.originalEvent.touches[0].pageX;
+        }
+    });
     </script>
   </body>
 </html>
