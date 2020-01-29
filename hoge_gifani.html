@@ -11,16 +11,6 @@
 
     <title>arサンプル</title>
 
-    <script>
-            AFRAME.registerComponent('foo', {
-      init: function () {
-        console.log("hoge ed");
-      }
-     });
-      
-      console.log("hogehoge");
-    </script>
-
   </head>
   <body style="margin:0px; overflow:hidden;">
     <a-scene embedded arjs="debugUIEnabled:false;">
@@ -34,5 +24,12 @@
     
       <a-entity camera></a-entity>
     </a-scene>
+
+    <script>  
+      console.log("hoge st");
+      var hoge = document.getElementById("kujie").getAttribute("position");
+      console.log("pos : "+hoge);
+      console.log("hoge ed");
+    </script>
   </body>
 </html>
