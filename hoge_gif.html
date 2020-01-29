@@ -4,26 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- A-Frame ライブラリの読み込み -->
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <!-- AR.js ライブラリの読み込み -->
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
     <title>arサンプル</title>
   </head>
   <body style="margin:0px; overflow:hidden;" onload="playVideo();">
     <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
     <a-scene embedded arjs="debugUIEnabled:false;">
-  <a-assets>
-    <img id="img" src="hoge.gif">
-  </a-assets>   
-
-        <!-- マーカーを登録（プリセットされている「kanji」マーカー） -->
-      <a-marker type='pattern' url='kujira.patt'>
-        <a-image src="#img"></a-image>
-      </a-marker>
   
+      <a-marker type='pattern' url='kujira.patt'>
+        <a-entity geometry="primitive:box" material="shader:gif;src:url(hoge.gif);transparent:true" gif=""></a-entity>
+      </a-marker>
+    
       <!-- AR用のカメラを置く -->
       <a-entity camera></a-entity>
-</a-scene>
+    </a-scene>
   </body>
 </html>
