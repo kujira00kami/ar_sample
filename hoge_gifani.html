@@ -14,18 +14,7 @@
 
   </head>
   <body style="margin:0px; overflow:hidden;">
-    <a-scene embedded arjs="debugUIEnabled:false;">
-      <a-assets>
-        <img id="kuji" src="kujira.gif">
-      </a-assets>
-  
-      <a-marker type='pattern' url='kujira.patt'>
-        <a-entity id="kujie" geometry="primitive:plane;" position="0 0 0" material="shader:gif;src:#kuji"></a-entity>
-      </a-marker>
     
-      <a-entity camera></a-entity>
-    </a-scene>
-
     <script>  
     $(function() {
         $('#kujie').on('touchstart', onTouchStart); //指が触れたか検知
@@ -42,7 +31,7 @@
         function onTouchMove(event) {
             var mov = position - getPosition(event);
             if (position - getPosition(event) > 70) { // 70px以上移動しなければスワイプと判断しない
-            alert("動いた");
+            alert("動いた x : "+mov.x);
             }
         }
 
@@ -52,5 +41,6 @@
         }
     });
     </script>
+    test
   </body>
 </html>
