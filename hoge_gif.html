@@ -13,10 +13,14 @@
   <body style="margin:0px; overflow:hidden;">
     <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
     <a-scene embedded arjs="debugUIEnabled:false;">
+      <a-assets>
+        <img id="kuji" src="kujira.gif">
+        <img id="kuji2" src="kujira2.gif">
+      </a-assets>
   
       <a-marker type='pattern' url='kujira.patt'>
-        <a-entity geometry="primitive:plane;" position="0 -5.0 0" material="shader:gif;src:url(kujira.gif)"></a-entity>
-        <a-entity geometry="primitive:plane;" position="0 -0.5 0" material="shader:gif;src:url(kujira2.gif)"></a-entity>
+        <a-entity geometry="primitive:plane;" position="0 0 0" material="shader:gif;src:#kuji2"></a-entity>
+        <a-entity geometry="primitive:plane;" position="0 -5.0 0" material="shader:gif;src:#kuji"></a-entity>
       </a-marker>
     
       <!-- AR用のカメラを置く -->
