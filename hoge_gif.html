@@ -10,12 +10,12 @@
     <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
     <title>arサンプル</title>
   </head>
-  <body style="margin:0px; overflow:hidden;" onload="playVideo();">
+  <body style="margin:0px; overflow:hidden;">
     <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
     <a-scene embedded arjs="debugUIEnabled:false;">
   
       <a-marker type='pattern' url='kujira.patt'>
-        <a-entity geometry="primitive:box" material="shader:gif;src:url(hoge.gif);transparent:true" gif=""></a-entity>
+        <a-entity geometry="primitive:box" material="shader:gif;src:url(kujira.gif);transparent:true" gif=""></a-entity>
       </a-marker>
     
       <!-- AR用のカメラを置く -->
