@@ -15,6 +15,10 @@
     
     <script>  
     $(function() {
+      
+        var hoge = document.getElementById("kujient");
+        var hoge2 = hoge.getAttribute("position");
+      
         $('#kujie').on('touchstart', onTouchStart); //指が触れたか検知
         $('#kujie').on('touchmove', onTouchMove); //指が動いたか検知
         var direction, position;
@@ -29,7 +33,7 @@
         function onTouchMove(event) {
             var mov = position - getPosition(event);
             if (position - getPosition(event) > 70) { // 70px以上移動しなければスワイプと判断しない
-            alert("動いた x : "+mov.x);
+                alert("動いた x : "+hoge2.x);
             }
         }
 
@@ -39,6 +43,19 @@
         }
     });
     </script>
-    test
+    
+    <a-scene embedded arjs="debugUIEnabled:false;">
+      <a-assets>
+        <img id="kuji" src="kujira.gif">
+        <img id="kuji2" src="kujira2.gif">
+      </a-assets>
+  
+      <a-marker type='pattern' url='kujira.patt'>
+        <a-entity id="kujient" geometry="primitive:plane;" position="0 0 0" material="shader:gif;src:#kuji"></a-entity>
+        <a-entity geometry="primitive:plane;" position="0 1.0 0" material="shader:gif;src:#kuji2"></a-entity>
+      </a-marker>
+    
+      <a-entity camera></a-entity>
+    </a-scene>
   </body>
 </html>
