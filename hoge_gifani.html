@@ -31,6 +31,7 @@
     
     <script>  
     $(function() {
+        alert("call func1 st");
       
         var hoge = document.getElementById("kujient");
         var hoge2 = hoge.getAttribute("position");
@@ -41,15 +42,19 @@
 
         //スワイプ開始時の横方向の座標を格納
         function onTouchStart(event) {
+            alert("call onTouchStart st");
             position = getPosition(event);
-            direction = ''; //一度リセットする
+            direction = ''; //一度リセットする{
+            alert("call onTouchStart ed");
         }
 
         //スワイプの方向（left／right）を取得
         function onTouchMove(event) {
+            alert("call onTouchMove st");
             var mov = position - getPosition(event);
             if (position - getPosition(event) > 70) { // 70px以上移動しなければスワイプと判断しない
                 alert("動いた x : "+hoge2.x);
+            alert("call onTouchMove ed");
             }
         }
 
@@ -57,6 +62,9 @@
         function getPosition(event) {
             return event.originalEvent.touches[0].pageX;
         }
+      
+      alert("call func1 ed");
+
     });
     </script>
 
