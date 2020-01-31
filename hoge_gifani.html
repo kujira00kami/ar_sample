@@ -30,6 +30,19 @@
     </a-scene>
     
     <script>  
+      
+	document.addEventListener('DOMContentLoaded', function(evt) {
+		// Z Fighting fix : https://github.com/jeromeetienne/AR.js/issues/410
+		const sceneEl = document.querySelector('a-scene');
+		var splash = document.querySelector('#splash');
+		sceneEl.addEventListener('loaded', () => {
+			splash.style.display = 'none';
+			sceneEl.camera = new THREE.PerspectiveCamera();
+			sceneEl.camera.near = 1;
+			sceneEl.camera.far = 100;
+		});
+	});
+      
     $(function() {
       
         var hoge = document.getElementById("kujient");
