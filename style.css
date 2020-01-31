@@ -1,0 +1,143 @@
+@media (orientation: portrait) {
+	.ui {
+		position: absolute;
+		margin: 0;
+		z-index: 10;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 105px;
+		padding: 15px 15px 30px 15px;
+		text-align: center;
+		box-sizing: border-box;
+	}
+	.ui a {
+		position: absolute;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	.credit {
+		position: absolute;
+		top: 2%;
+		right: 3%;	
+		width: 20px;
+		height: 20px;
+		color: #bbbbbb;
+		opacity: 0.7;
+	}
+}
+
+@media (orientation: landscape) {
+	.ui {
+		position: absolute;
+		margin: 0;
+		z-index: 10;
+		top: 0;
+		right: 0;
+		width: 105px;
+		height: 100%;
+		padding: 15px 30px 15px 15px;
+		text-align: center;
+		box-sizing: border-box;
+	}
+	.ui a {
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	.credit {
+		position: absolute;
+		top: 2%;
+		left: 1%;	
+		width: 20px;
+		height: 20px;
+		color: #bbbbbb;
+		opacity: 0.7;
+	}
+}
+
+.ui a {
+	width: 60px;
+	height: 60px;
+	display: block;
+	background-color: #ffffff;
+	line-height: 100%;
+	color: #202020;
+	border-radius: 50%;
+}
+.ui a i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.ui a.disabled {
+	pointer-events: none;
+	color: #bbbbbb;
+}
+.ui a:active {
+	color: #ff0000;
+}
+
+.hidden {
+	display: none;
+}
+
+#flash {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-color: #ffffff;
+	z-index: 9;
+}
+
+#preview{
+	text-align: center;
+	margin: auto;
+}
+
+/* ローディング */
+#splash {
+	position: absolute;
+  
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  
+	width: 200px;
+	height: 200px;
+  
+	margin: auto;
+}
+
+#splash p {
+	margin-right: 10px;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loading {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	border: 0.25rem solid rgba(255, 255, 255, 0.2);
+	border-top-color: #0080ff;
+	animation: spin 1s infinite linear;
+}
