@@ -22,11 +22,11 @@
 	vr-mode-ui="enabled:false;">
 
       <a-assets>
-        <img id="kuji" src="kujira.gif">
-        <img id="kuji2" src="kujira2.gif">
+        <img id="kuji" src="./kujira.gif">
+        <img id="kuji2" src="./kujira2.gif">
       </a-assets>
   
-      <a-marker type='pattern' url='kujira.patt'>
+      <a-marker type='pattern' url='./kujira.patt'>
 	      <!-- primitive:plane … 平面にgif描画 -->
         <a-entity id="kujient" geometry="primitive:plane;" position="0 0 0" material="shader:gif;src:#kuji"></a-entity>
         <a-entity geometry="primitive:plane;" position="0 1.0 0" material="shader:gif;src:#kuji2"></a-entity>
