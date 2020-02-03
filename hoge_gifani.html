@@ -82,6 +82,17 @@
       
 
     });
+	    
+	    
+	document.addEventListener('DOMContentLoaded', function(evt) {
+		const sceneEl = document.querySelector('a-scene');
+		sceneEl.addEventListener('loaded', () => {
+			// THREE.PerspectiveCamera : 遠近感が適用されるカメラ
+			sceneEl.camera = new THREE.PerspectiveCamera();
+			sceneEl.camera.near = 1;
+			sceneEl.camera.far = 100;
+		});
+	});
     </script>
 
     
