@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	  <!-- キャッシュ無効 -->
+    <meta http-equiv="Pragma" content="no-cache">
+	  <!-- iosカメラ起動に必要 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>arサンプル</title>
+  </head>
+  <body style="margin:0px; overflow:hidden;">   
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    
+	  <!-- logarithmicDepthBuffer : 対数深度バッファーを使用 -->
+    <a-scene
+	embedded arjs="debugUIEnabled:false;"
+	vr-mode-ui="enabled:false;">
+
+      <a-assets>
+        <img id="kuji" src="kujira.gif">
+        <img id="kuji2" src="kujira2.gif">
+      </a-assets>
+  
+      <a-marker type='pattern' url='kujira.patt'>
+	      <!-- primitive:plane … 平面にgif描画 -->
+        <a-entity id="kujient" geometry="primitive:plane;" position="0 0 0" material="shader:gif;src:#kuji"></a-entity>
+        <a-entity geometry="primitive:plane;" position="0 1.0 0" material="shader:gif;src:#kuji2"></a-entity>
+      </a-marker>
+    
+      <a-entity camera></a-entity>
+    </a-scene>
+    </div>
+  </body>
+</html>
