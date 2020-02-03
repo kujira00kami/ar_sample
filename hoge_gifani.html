@@ -33,7 +33,8 @@
 	  <!-- logarithmicDepthBuffer : 対数深度バッファーを使用 -->
     <a-scene
 	embedded arjs="debugUIEnabled:false;trackingMethod:best;"
-	vr-mode-ui="enabled: false">
+	vr-mode-ui="enabled: false"
+	      renderer="logarithmicDepthBuffer: true; colorManagement: true; sortObjects: true;">
 
       <a-assets>
         <img id="kuji" src="kujira.gif">
