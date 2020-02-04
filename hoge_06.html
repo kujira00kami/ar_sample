@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	  <!-- キャッシュ無効 -->
+    <meta http-equiv="Pragma" content="no-cache">
+	  <!-- iosカメラ起動に必要 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>hoge_06</title>
+  </head>
+  <body style="margin:0px; overflow:hidden;">   
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    
+	  <!-- logarithmicDepthBuffer : 対数深度バッファーを使用 -->
+    <a-scene
+	embedded arjs="debugUIEnabled:false;"
+	vr-mode-ui="enabled:false;">
+
+  <a-assets>
+    <video id="penguin-sledding" playsinline muted autoplay loop src="kujira.mp4"></video>
+  </a-assets>
+  
+      <a-marker type='pattern' url='kujira_06.patt'>
+	      <a-video rotation='270 0 0' src='#penguin-sledding' scale='10.0 10.0 10.0'></a-video>
+      </a-marker>
+    
+      <a-entity camera></a-entity>
+    </a-scene>
+	
+	    <script type="text/javascript">
+var v = document.getElementById("penguin-sledding");
+      function playVideo() {
+	//動画を再生
+	v.play();
+	
+  }
+      </script>
+  </body>
+</html>
