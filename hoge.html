@@ -21,17 +21,24 @@
 	embedded arjs="debugUIEnabled:false;"
 	vr-mode-ui="enabled:false;">
 
-      <a-assets>
-        <img id="kuji" src="./kujira4.gif">
-      </a-assets>
+  <a-assets>
+    <video id="penguin-sledding" playsinline muted autoplay loop src="kujira.mp4"></video>
+  </a-assets>
   
       <a-marker type='pattern' url='kujira.patt'>
-	      <!-- primitive:plane … 平面にgif描画 -->
-        <a-entity id="kujient" geometry="primitive:plane;" rotation="0 0 180" material="shader:gif;src:#kuji"></a-entity>
+	      <a-video rotation='270 0 0' src='#penguin-sledding' scale='10.0 10.0 10.0'></a-video>
       </a-marker>
     
       <a-entity camera></a-entity>
     </a-scene>
-    </div>
+	
+	    <script type="text/javascript">
+var v = document.getElementById("penguin-sledding");
+      function playVideo() {
+	//動画を再生
+	v.play();
+	
+  }
+      </script>
   </body>
 </html>
