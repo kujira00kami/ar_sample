@@ -7,7 +7,7 @@
 	  <!-- iosカメラ起動に必要 -->
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <title>arサンプル</title>
+    <title>arサンプル_PC画面推奨</title>
   </head>
   <body style="margin:0px; overflow:hidden;">   
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
@@ -27,7 +27,7 @@
   
       <a-marker type='pattern' url='kujira2.patt'>
 	      <!-- primitive:plane … 平面にgif描画 -->
-        <a-entity id="kujient" geometry="primitive:plane;" position="0 0 0" material="shader:gif;src:#kuji"></a-entity>
+        <a-entity id="kujient" geometry="primitive:plane;" position="90 0 0" material="shader:gif;src:#kuji"></a-entity>
       </a-marker>
     
       <a-entity camera></a-entity>
