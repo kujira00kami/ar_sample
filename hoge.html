@@ -12,13 +12,14 @@
       <a-assets>
           <img id="tile" src="./hoge.png">
       </a-assets>
-      <a-image src="#tile" rotation="90 0 0" scale="30 30 30" position="0 50 0"></a-image>
+      <a-image src="#tile" rotation="90 0 0" scale="100 100 100" position="0 50 0"></a-image>
       <a-camera></a-camera>
     </a-scene>
 
     <script>  
       $(function() {
-        
+          alert("function call");
+
           var hoge = document.getElementById("tile");
           var hoge2 = hoge.getAttribute("position");
         
