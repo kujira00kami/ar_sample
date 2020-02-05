@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>hoge_sel</title>
+
+  </head>
+  <body style="margin:0px; overflow:hidden;">    
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    
+    <a-scene
+	embedded arjs="debugUIEnabled:false;trackingMethod:best;"
+	vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true; colorManagement: true; sortObjects: true;">
+
+      <a-assets>
+        <img id="kuji" src="kujira.gif">
+        <img id="kuji2" src="kujira2.gif">
+      </a-assets>
+  
+      <a-marker type='pattern' url='kujira.patt'>
+        <a-entity id="kujient" geometry="primitive:plane;" position="0 0 0" material="shader:gif;src:#kuji"></a-entity>
+        <a-entity geometry="primitive:plane;" position="0 1.0 0" material="shader:gif;src:#kuji2"></a-entity>
+      </a-marker>
+    
+      <a-entity camera></a-entity>
+    </a-scene>
+    
+    <script>  
+    $(function() {
+      
+        var hoge = document.getElementById("kujient");
+        var hoge2 = hoge.getAttribute("position");
+      
+        hoge.addEventListener('mousedown', onTouchStart); //指が触れたか検知
+        hoge.addEventListener('mouseleave', onTouchMove); //指が動いたか検知
+        var direction, position;
+
+        //スワイプ開始時の横方向の座標を格納
+        function onTouchStart(event) {
+            alert("call onTouchStart st");
+            position = getPositionX(event);
+            direction = ''; //一度リセットする{
+            alert("call onTouchStart ed");
+        }
+
+        //スワイプの方向（left／right）を取得
+        function onTouchMove(event) {
+            alert("call onTouchMove st");
+            var mov = position - getPositionX(event);
+            if (position - getPositionX(event) > 70) { // 70px以上移動しなければスワイプと判断しない
+                alert("動いた x : "+hoge2.x);
+            }
+            alert("call onTouchMove ed");
+        }
+
+        //横方向の座標を取得
+        function getPositionX(event) {
+            return event.originalEvent.touches[0].pageX;
+        }
+      
+
+    });
+    </script>
+
+    
+    
+  </body>
+</html>
