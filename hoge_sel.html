@@ -5,7 +5,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <title>hoge_sel</title>
+    <title>hoge_sel2</title>
 
   </head>
   <body style="margin:0px; overflow:hidden;">    
@@ -21,18 +21,15 @@
 
       <a-assets>
         <img id="kuji" src="kujira.gif">
-        <img id="kuji2" src="kujira2.gif">
       </a-assets>
-  
-      <a-marker type='pattern' url='kujira.patt'>
-        <a-entity id="kujient" geometry="primitive:plane;" position="0 0 0" material="shader:gif;src:#kuji"></a-entity>
-        <a-entity geometry="primitive:plane;" position="0 1.0 0" material="shader:gif;src:#kuji2"></a-entity>
-      </a-marker>
+
+      <a-image src="#kuji"></a-image>
     
       <a-entity camera></a-entity>
     </a-scene>
     
     <script>  
+    /*
     $(function() {
       
         var hoge = document.getElementById("kujient");
@@ -67,6 +64,7 @@
       
 
     });
+    */
     </script>
 
     
