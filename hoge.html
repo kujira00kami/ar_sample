@@ -2,15 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>sa6</title>
+    <title>png</title>
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
   </head>
   <body>
     <a-scene>
       <a-assets>
-          <img id="tile" src="./hoge_img.png">
+          <img id="tile" src="./hoge.png">
       </a-assets>
       <a-image src="#tile" rotation="90 0 0" scale="30 30 30" position="0 50 0"></a-image>
       <a-camera></a-camera>
@@ -48,7 +48,8 @@
           function getPositionX(event) {
               return event.originalEvent.touches[0].pageX;
           }
-      });
+      }
+      );
       </script>
   </body>
 </html>
