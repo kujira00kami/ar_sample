@@ -28,7 +28,7 @@
         hoge.addEventListener('mouseleave', onTouchMove); //指が動いたか検知
       */
 
-      hoge.addEventListener('load', hogehoge); //指が触れたか検知
+      hoge.addEventListener('loaded', hogehoge);
 
       hoge.addEventListener('mousedown', onTouchStart); //指が触れたか検知
       hoge.addEventListener('mouseleave', onTouchMove); //指が動いたか検知
@@ -43,7 +43,7 @@
         function onTouchMove(event) {
             alert("call onTouchMove st");
         }
-
+        
         function hogehoge(event) {
             alert("call hogehoge st");
         }
