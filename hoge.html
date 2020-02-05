@@ -28,25 +28,13 @@
           hoge.addEventListener('mouseleave', onTouchMove); //指が動いたか検知
         */
 
-        hoge.addEventListener('loaded', hogehoge);
+        hoge.addEventListener('mousedown', function (event) {
+          alert("call mousedown st");
+        }); //指が触れたか検知
 
-        hoge.addEventListener('mousedown', onTouchStart); //指が触れたか検知
-        hoge.addEventListener('mouseleave', onTouchMove); //指が動いたか検知
-
-
-        //スワイプ開始時の横方向の座標を格納
-        function onTouchStart(event) {
-            alert("call onTouchStart st");
-        }
-
-        //スワイプの方向（left／right）を取得
-        function onTouchMove(event) {
-            alert("call onTouchMove st");
-        }
-        
-        function hogehoge(event) {
-            alert("call hogehoge st");
-        }
+        hoge.addEventListener('mouseleave', function (event) {
+          alert("call mouseleave st");
+        });
  
         alert("function ed");
       });
