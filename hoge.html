@@ -12,14 +12,14 @@
       <a-assets>
           <img id="tile" src="./hoge.png">
       </a-assets>
-      <a-image src="#tile" rotation="90 0 0" scale="100 100 100" position="0 0 0"></a-image>
+      <a-image hogehoge src="#tile" rotation="90 0 0" scale="100 100 100" position="0 0 0"></a-image>
       <a-camera></a-camera>
     </a-scene>
 
     <script>
     window.onload = function(){
 
-      AFRAME.registerComponent('tile', {
+      AFRAME.registerComponent('hogehoge', {
         init: function () {
           alert('hogehoge');  // Reference to the scene element.
         }
