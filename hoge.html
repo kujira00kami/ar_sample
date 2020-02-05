@@ -18,16 +18,18 @@
 
     <script>
     window.onload = function(){
+
+      AFRAME.registerComponent('foo', {
+        init: function () {
+          console.log('hogehoge');  // Reference to the scene element.
+        }
+      });
+      /*
       $(function() {
         alert("function st");
 
         //var hoge = document.getElementById("tile");
         var hoge = document.querySelector('tile');
-      
-        /*
-          hoge.addEventListener('mousedown', onTouchStart); //指が触れたか検知
-          hoge.addEventListener('mouseleave', onTouchMove); //指が動いたか検知
-        */
 
         hoge.addEventListener('mousedown', function (event) {
           alert("call click st");
@@ -39,6 +41,7 @@
  
         alert("function ed");
       });
+      */
     };
     </script>
   </body>
