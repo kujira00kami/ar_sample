@@ -22,33 +22,18 @@
         alert("function call");
 
         var hoge = document.getElementById("tile");
-        var hoge2 = hoge.getAttribute("position");
       
         hoge.addEventListener('mousedown', onTouchStart); //指が触れたか検知
         hoge.addEventListener('mouseleave', onTouchMove); //指が動いたか検知
-        var direction, position;
 
         //スワイプ開始時の横方向の座標を格納
         function onTouchStart(event) {
             alert("call onTouchStart st");
-            position = getPositionX(event);
-            direction = ''; //一度リセットする{
-            alert("call onTouchStart ed");
         }
 
         //スワイプの方向（left／right）を取得
         function onTouchMove(event) {
             alert("call onTouchMove st");
-            var mov = position - getPositionX(event);
-            if (position - getPositionX(event) > 70) { // 70px以上移動しなければスワイプと判断しない
-                alert("動いた x : "+hoge2.x);
-            }
-            alert("call onTouchMove ed");
-        }
-
-        //横方向の座標を取得
-        function getPositionX(event) {
-            return event.originalEvent.touches[0].pageX;
         }
       });
     };
