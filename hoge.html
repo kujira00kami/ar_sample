@@ -9,27 +9,21 @@
   </head>
   <body>
     <a-scene>
-        <a-entity camera look-controls>
-                <a-entity cursor="rayOrigin: mouse"
-                position="0 0 -1"
-                geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-                material="color: black; shader: flat">
-      </a-entity>
-        </a-entity>
-        <a-entity id="box" cursor-listener geometry="primitive: box" position="0 1 -5" material="color: blue"></a-entity>
+      <a-box camera-listener position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
+      <a-sphere camera-listener position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
+      <a-cylinder camera-listener position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
     </a-scene>
 </body>
-    <script>
-      AFRAME.registerComponent('cursor-listener', {
-          init: function () {
-              var lastIndex = -1;
-              var COLORS = ['red', 'green', 'blue'];
-              this.el.addEventListener('click', function (evt) {
-                  lastIndex = (lastIndex + 1) % COLORS.length;
-                  this.setAttribute('material', 'color', COLORS[lastIndex]);
-                  console.log('I was clicked at: ', evt.detail.intersection.point);
-              });
-          }
+<script>
+  var i = -1;
+  var COLORS = ['red', 'green', 'blue'];
+  AFRAME.registerComponent('camera-listener', {
+    init: function () {
+      this.el.addEventListener('click', function (evt) {
+        i = (i + 1) % COLORS.length;
+        this.setAttribute('material', 'color', COLORS[i]);
       });
-  </script>
+    }
+  });
+</script>
 </html>
