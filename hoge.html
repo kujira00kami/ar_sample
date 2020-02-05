@@ -20,17 +20,10 @@
 </body>
 <script>
   window.onload = function(){
-  var i = -1;
-  var COLORS = ['red', 'green', 'blue'];
-      var el = document.querySelector('a-scene');
-  AFRAME.registerComponent('camera-listener', {
-    init: function () {
-      this.el.addEventListener('click', function (evt) {
-        i = (i + 1) % COLORS.length;
-        this.setAttribute('material', 'color', COLORS[i]);
-      });
-    }
-  });
-    };
+    alert("onload st");
+    var sceneEl = document.querySelector('a-scene');
+    var entity = sceneEl.querySelector('a-entity'); 
+    alert("onload ed");
+  };
 </script>
 </html>
