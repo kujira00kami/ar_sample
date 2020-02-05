@@ -19,6 +19,7 @@
     </a-scene>
 </body>
 <script>
+  window.onload = function(){
   var i = -1;
   var COLORS = ['red', 'green', 'blue'];
   AFRAME.registerComponent('camera-listener', {
@@ -29,5 +30,6 @@
       });
     }
   });
+    };
 </script>
 </html>
