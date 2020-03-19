@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>ar-sample</title>
+  </head>
+  <body style="margin:0px; overflow:hidden;" onload="playVideo();">
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+
+    <a-scene embedded arjs="debugUIEnabled:false;">
+  <a-assets>
+    <video id="penguin-sledding" playsinline muted autoplay loop src="hoge.mp4"></video>
+  </a-assets>
+
+      <a-marker type='pattern' url='hoge'.patt'>
+	      <a-video rotation='270 0 0' src='#penguin-sledding' segments-width='3' segments-height='1.5'></a-video>
+      </a-marker>
+ 
+  <a-entity camera></a-entity>
+</a-scene>
+    
+    <script type="text/javascript">
+var v = document.getElementById("penguin-sledding");
+      function playVideo() {
+	v.play();
+	
+  }
+      </script>
+  </body>
+</html>
